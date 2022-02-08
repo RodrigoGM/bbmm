@@ -1,6 +1,6 @@
 ##  Beta binomial mixture model for single-cell genotype prediction
 ## Authors: Ronglai Shen <shenr@mskcc.org>
-## 			Rodrigo Gularte Mérida <gularter@mskcc.org>
+##          Rodrigo Gularte Mérida <gularter@mskcc.org>
 rm(list=ls())
 
 ## add libraries
