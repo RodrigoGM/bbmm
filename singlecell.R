@@ -6,10 +6,15 @@ rm(list=ls())
 ## add libraries
 library(ggplot2)
 library(VGAM)
-source("betabinom_mixture/betabinom_mix.R")
+library(tidyverse)
+source("R/betabinom_mix.R")
 
+## inputs: training and test sets
 training.file <- "train/cell_line.training.txt"
 test.file <- "test/crc_dd.merged.sufam.txt"
+
+## output: predicted genotypes
+usethis::use_directory("results")
 out.file <- "test/crc_dd.cell_line.predicted.genotypes.txt"
 out.res <- "results/crc_dd.cell_line.predicted.genotypes.txt"
 
@@ -103,7 +108,6 @@ mean(y == 2 & pred != 2)
 test.data <- cbind(test.data, pred, postg)
 
 test.data$postg <- apply(postg, 1, max)
-
 
 write.table(test.data, file = out.file, quote = FALSE, row.names = FALSE, sep = "\t", na = ".")
 write.table(test.data, file = out.res, quote = FALSE, row.names = FALSE, sep = "\t", na = ".")
