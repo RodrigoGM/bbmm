@@ -9,8 +9,8 @@ library(VGAM)
 source("betabinom_mixture/betabinom_mix.R")
 
 training.file <- "train/cell_line.training.txt"
-test.file <- "data-raw/crc_dd.merged.sufam.txt"
-out.file <- "data-raw/crc_dd.cell_line.predicted.genotypes.txt"
+test.file <- "test/crc_dd.merged.sufam.txt"
+out.file <- "test/crc_dd.cell_line.predicted.genotypes.txt"
 out.res <- "results/crc_dd.cell_line.predicted.genotypes.txt"
 
 ## data
