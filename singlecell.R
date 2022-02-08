@@ -8,7 +8,7 @@ library(ggplot2)
 library(VGAM)
 source("betabinom_mixture/betabinom_mix.R")
 
-training.file <- "betabinom_mixture/train/cell_line.training.txt"
+training.file <- "train/cell_line.training.txt"
 test.file <- "data-raw/crc_dd.merged.sufam.txt"
 out.file <- "data-raw/crc_dd.cell_line.predicted.genotypes.txt"
 out.res <- "results/crc_dd.cell_line.predicted.genotypes.txt"
